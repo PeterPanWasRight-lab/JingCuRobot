@@ -20,7 +20,7 @@ function T = MatrixExp6(se3mat)
 %         0         0         0    1.0000 
 
 omgtheta = so3ToVec(se3mat(1: 3, 1: 3));
-if NearZero(norm(omgtheta))
+if  ~isa(omgtheta, 'sym') && NearZero(norm(omgtheta)) 
     T = [eye(3), se3mat(1: 3, 4); 0, 0, 0, 1];
 else
     [omghat, theta] = AxisAng3(omgtheta);

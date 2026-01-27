@@ -16,7 +16,7 @@ function  R = MatrixExp3(so3mat)
 %    0.6930    0.6313    0.3481
 
 omgtheta = so3ToVec(so3mat);
-if NearZero(norm(omgtheta))
+if ~isa(omgtheta, 'sym') && NearZero(norm(omgtheta))
     R = eye(3);
 else
     [omghat, theta] = AxisAng3(omgtheta);
