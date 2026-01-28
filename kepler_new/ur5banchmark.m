@@ -43,7 +43,8 @@ M07 = M07 * Mlist(:,:,i);
 end
 M07 %[output:14a79ae6]
 %%
-addpath('./modernRobot/mr')
+addpath('./modernRobot')
+addpath('./modernRobot/mr/')
 addpath('./kepler_new')
 
 W = [0.10915 0.08230];
@@ -127,7 +128,7 @@ end
 T06 %[output:57b985c7]
 
 % T05
-
+% ...
 %%
 %UR5 standard_DH parameter peter工具箱
 a=[0,-0.42500,-0.39225,0,0,0];
